@@ -1,0 +1,63 @@
+\hypertarget{main_8c}{}\section{Riferimenti per il file main.\+c}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+Funzione principale del programma.  
+
+
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}mylib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}child.\+h\char`\"{}}\\*
+Grafo delle dipendenze di inclusione per main.\+c\+:
+% FIG 0
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a16b50144e91635a3df3455ad93c413a1}{N\+U\+M\+\_\+\+P\+A\+R\+AM}~4\hypertarget{main_8c_a16b50144e91635a3df3455ad93c413a1}{}\label{main_8c_a16b50144e91635a3df3455ad93c413a1}
+
+\begin{DoxyCompactList}\small\item\em Definisce il numero di parametri necessario all\textquotesingle{}esecuzione del programma. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funzione principale del programma~\newline
+Si occupa di allocare dinamicamente il numero di thread necessarie a svolgere nel modo più efficiente e veloce possibile, il calcolo del prodotto tra le matrici A e B e per calcolare la somma delle righe della matrice prodotto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Funzione principale del programma. 
+
+Contiene il codice che gestisce il processo padre che si occupa della sincronizzazione di tutti i processi figli per il calcolo del prodotto tra matrici quadrate dello stesso ordine
+
+\begin{DoxyAuthor}{Autore}
+Ghignoni Eros V\+R397407 
+\end{DoxyAuthor}
+
+
+\subsection{Documentazione delle funzioni}
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Funzione principale del programma~\newline
+Si occupa di allocare dinamicamente il numero di thread necessarie a svolgere nel modo più efficiente e veloce possibile, il calcolo del prodotto tra le matrici A e B e per calcolare la somma delle righe della matrice prodotto. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em argc} & numero di argomenti passati da riga di comando \\
+\hline
+{\em argv} & vettore che contiene i parametri da riga di comando \\
+\hline
+\end{DoxyParams}

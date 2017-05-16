@@ -1,0 +1,380 @@
+\hypertarget{utils_8h}{}\section{Riferimenti per il file utils.\+h}
+\label{utils_8h}\index{utils.\+h@{utils.\+h}}
+
+
+Libreria che contiene funzioni di utilità per il programma.  
+
+
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+Grafo delle dipendenze di inclusione per utils.\+h\+:
+% FIG 0
+Questo grafo mostra quali altri file includono direttamente o indirettamente questo file\+:
+% FIG 1
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{utils_8h_a3d90c3595597b3132a70468e83a492ad}{N\+U\+M\+\_\+\+B\+Y\+TE}~512\hypertarget{utils_8h_a3d90c3595597b3132a70468e83a492ad}{}\label{utils_8h_a3d90c3595597b3132a70468e83a492ad}
+
+\begin{DoxyCompactList}\small\item\em Numero massimo di byte per riga file matrice. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_aef5dfd8b21e74931b22c514b25aafc10}{S\+H\+M\+\_\+\+K\+E\+Y\+\_\+A}~90\hypertarget{utils_8h_aef5dfd8b21e74931b22c514b25aafc10}{}\label{utils_8h_aef5dfd8b21e74931b22c514b25aafc10}
+
+\begin{DoxyCompactList}\small\item\em Chiave per memoria condivisa matrix\+\_\+A. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_a5eb6670fe12ca57b8f7c3ba914173edf}{S\+H\+M\+\_\+\+K\+E\+Y\+\_\+B}~91\hypertarget{utils_8h_a5eb6670fe12ca57b8f7c3ba914173edf}{}\label{utils_8h_a5eb6670fe12ca57b8f7c3ba914173edf}
+
+\begin{DoxyCompactList}\small\item\em Chiave per memoria condivisa matrix\+\_\+B. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_a2141a533908abd184a1dd49d03aa89ad}{S\+H\+M\+\_\+\+K\+E\+Y\+\_\+C}~92\hypertarget{utils_8h_a2141a533908abd184a1dd49d03aa89ad}{}\label{utils_8h_a2141a533908abd184a1dd49d03aa89ad}
+
+\begin{DoxyCompactList}\small\item\em Chiave per memoria condivisa matrix\+\_\+C. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_a23145b02060e2da8aad870e128740a39}{S\+H\+M\+\_\+\+K\+E\+Y\+\_\+\+S\+O\+M\+MA}~93\hypertarget{utils_8h_a23145b02060e2da8aad870e128740a39}{}\label{utils_8h_a23145b02060e2da8aad870e128740a39}
+
+\begin{DoxyCompactList}\small\item\em Chiave per memoria condivisa S\+H\+M\+\_\+\+K\+E\+Y\+\_\+\+S\+O\+M\+MA. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_acebb45f6d9740063956da4fc574b2b04}{M\+S\+G\+\_\+\+K\+EY}~100\hypertarget{utils_8h_acebb45f6d9740063956da4fc574b2b04}{}\label{utils_8h_acebb45f6d9740063956da4fc574b2b04}
+
+\begin{DoxyCompactList}\small\item\em Chiave per messaggi tra padre e figli. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_a299ffb74b818be524ba85f23e7978906}{S\+E\+M\+\_\+\+K\+EY}~101\hypertarget{utils_8h_a299ffb74b818be524ba85f23e7978906}{}\label{utils_8h_a299ffb74b818be524ba85f23e7978906}
+
+\begin{DoxyCompactList}\small\item\em Chiave per semaforo mutex condiviso. \end{DoxyCompactList}\item 
+\#define \hyperlink{utils_8h_a23195218eef2cf21e2beae685a041783}{D\+E\+L\+I\+M\+I\+T\+ER}~\char`\"{};\char`\"{}\hypertarget{utils_8h_a23195218eef2cf21e2beae685a041783}{}\label{utils_8h_a23195218eef2cf21e2beae685a041783}
+
+\begin{DoxyCompactList}\small\item\em Delimitatore dei comandi padre -\/$>$ figli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{utils_8h_a65743059357cefdd1a1ac1ffb6049760}{stampa} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Funzione che stampa a schermo (usando system call) la stringa come parametro. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_ae1af2fb7369da48f2742cf9f0f031c22}{read\+\_\+matrix} (int fd, int ordine, int $\ast$$\ast$matrix)
+\begin{DoxyCompactList}\small\item\em Funzione che legge una matrice da file. \end{DoxyCompactList}\item 
+int \hyperlink{utils_8h_aada96e223087c1869c2a1a8b1098c183}{read\+\_\+line} (int fd, char $\ast$buff, int max\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Funzione che legge una riga da file. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_a36aacd45d0367938190ecb2a94d1fb3f}{print\+\_\+matrix} (int $\ast$$\ast$matrix, int ordine)
+\begin{DoxyCompactList}\small\item\em Stampa a schermo la matrice passata come parametro. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_a43bf6785b9953c773eee0c52a5ec3e65}{print\+\_\+matrix\+\_\+2d} (int $\ast$matrix, int ordine)
+\begin{DoxyCompactList}\small\item\em Stampa a schermo la matrice 2d passata come parametro (matrice salvata come vettore unidimensionale) \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \hyperlink{utils_8h_aa83bfe3ed154fdf125ec364f9a5e3217}{create\+\_\+matrix} (int order)
+\begin{DoxyCompactList}\small\item\em Funzione che alloca la memoria ad una matrice di ordine passato come parametro inizializzata a 0. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_ac99aadc6a3e61718bab7d71cddc9deb6}{free\+\_\+matrix} (int $\ast$$\ast$matrix, int order)
+\begin{DoxyCompactList}\small\item\em Libera la memoria allocata per la matrice passata come parametro. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_a45f9079768593414eeb4402daa033d60}{load\+\_\+matrix} (int $\ast$$\ast$matrix, int $\ast$array2d, int order)
+\begin{DoxyCompactList}\small\item\em Carica una matrice in un vettore unidimensionale. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_ac9b84feb3065714ff2d0a2e0722d1c3b}{set\+\_\+matrix} (int $\ast$shmem, int order)
+\begin{DoxyCompactList}\small\item\em Inizializza la matrice a 0. \end{DoxyCompactList}\item 
+int \hyperlink{utils_8h_aacb5fa6481405202e36ad810a02595e8}{position} (int $\ast$vec, int elem, int len)
+\item 
+void \hyperlink{utils_8h_ad05311c1c06e52f00599e07841bcd5bc}{write\+\_\+matrix\+\_\+} (int fd, int $\ast$$\ast$matrix, int ord)
+\begin{DoxyCompactList}\small\item\em Scrive la matrice in formato csv su file descriptor passato come parametro. \end{DoxyCompactList}\item 
+int \hyperlink{utils_8h_a983183d89abaf6bb022ee3d7084994a1}{get\+\_\+next\+\_\+row} (int $\ast$$\ast$control\+\_\+matrix, int order)
+\begin{DoxyCompactList}\small\item\em Ritorna l\textquotesingle{}indice di riga della matrice che è gia stata calcolata tutta (moltiplicazione) La matrice passata per parametro è una matrice di controllo in cui è settato a 1 l\textquotesingle{}elemento già calcolato. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_a6726ed399c12a4fba8d324c448207b73}{set\+\_\+row} (int $\ast$$\ast$control\+\_\+matrix, int order, int row, int value)
+\begin{DoxyCompactList}\small\item\em Scrive una riga della matrice passata come parametro, con il valore selezionato. \end{DoxyCompactList}\item 
+void \hyperlink{utils_8h_a8a3bf67efd4aa75c8ae5e92b96770069}{genera\+\_\+parametri} (int riga, int colonna, int ordine, int cmd, char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Genera una stringa che descrive i parametri che il padre invia al figlio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Libreria che contiene funzioni di utilità per il programma. 
+
+Libreria creata dall\textquotesingle{}autore
+
+\begin{DoxyAuthor}{Autore}
+Ghignoni Eros V\+R397407 
+\end{DoxyAuthor}
+
+
+\subsection{Documentazione delle funzioni}
+\index{utils.\+h@{utils.\+h}!create\+\_\+matrix@{create\+\_\+matrix}}
+\index{create\+\_\+matrix@{create\+\_\+matrix}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{create\+\_\+matrix(int order)}{create_matrix(int order)}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ create\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{order}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_aa83bfe3ed154fdf125ec364f9a5e3217}{}\label{utils_8h_aa83bfe3ed154fdf125ec364f9a5e3217}
+
+
+Funzione che alloca la memoria ad una matrice di ordine passato come parametro inizializzata a 0. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em order} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!free\+\_\+matrix@{free\+\_\+matrix}}
+\index{free\+\_\+matrix@{free\+\_\+matrix}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{free\+\_\+matrix(int $\ast$$\ast$matrix, int order)}{free_matrix(int **matrix, int order)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{matrix, }
+\item[{int}]{order}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_ac99aadc6a3e61718bab7d71cddc9deb6}{}\label{utils_8h_ac99aadc6a3e61718bab7d71cddc9deb6}
+
+
+Libera la memoria allocata per la matrice passata come parametro. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em matrix} & contiene il puntatore alla matrice \\
+\hline
+{\em order} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!genera\+\_\+parametri@{genera\+\_\+parametri}}
+\index{genera\+\_\+parametri@{genera\+\_\+parametri}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{genera\+\_\+parametri(int riga, int colonna, int ordine, int cmd, char $\ast$buff)}{genera_parametri(int riga, int colonna, int ordine, int cmd, char *buff)}}]{\setlength{\rightskip}{0pt plus 5cm}void genera\+\_\+parametri (
+\begin{DoxyParamCaption}
+\item[{int}]{riga, }
+\item[{int}]{colonna, }
+\item[{int}]{ordine, }
+\item[{int}]{cmd, }
+\item[{char $\ast$}]{buff}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a8a3bf67efd4aa75c8ae5e92b96770069}{}\label{utils_8h_a8a3bf67efd4aa75c8ae5e92b96770069}
+
+
+Genera una stringa che descrive i parametri che il padre invia al figlio. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em riga} & riga della matrice A \\
+\hline
+{\em colonna} & colonna della matrice B \\
+\hline
+{\em ordine} & ordine delle due matrici \\
+\hline
+{\em cmd} & comando da eseguire (vedi file \hyperlink{child_8h}{child.\+h}) \\
+\hline
+{\em buff} & stringa su cui viene salvata la stringa di comando \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!get\+\_\+next\+\_\+row@{get\+\_\+next\+\_\+row}}
+\index{get\+\_\+next\+\_\+row@{get\+\_\+next\+\_\+row}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{get\+\_\+next\+\_\+row(int $\ast$$\ast$control\+\_\+matrix, int order)}{get_next_row(int **control_matrix, int order)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+next\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{control\+\_\+matrix, }
+\item[{int}]{order}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a983183d89abaf6bb022ee3d7084994a1}{}\label{utils_8h_a983183d89abaf6bb022ee3d7084994a1}
+
+
+Ritorna l\textquotesingle{}indice di riga della matrice che è gia stata calcolata tutta (moltiplicazione) La matrice passata per parametro è una matrice di controllo in cui è settato a 1 l\textquotesingle{}elemento già calcolato. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em control\+\_\+matrix} & matrice di controllo (1 = elemento calcolato) \\
+\hline
+{\em order} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+indice della riga della matrice in cui è già stata calcolata la moltiplicazione 
+\end{DoxyReturn}
+\index{utils.\+h@{utils.\+h}!load\+\_\+matrix@{load\+\_\+matrix}}
+\index{load\+\_\+matrix@{load\+\_\+matrix}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{load\+\_\+matrix(int $\ast$$\ast$matrix, int $\ast$array2d, int order)}{load_matrix(int **matrix, int *array2d, int order)}}]{\setlength{\rightskip}{0pt plus 5cm}void load\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{matrix, }
+\item[{int $\ast$}]{array2d, }
+\item[{int}]{order}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a45f9079768593414eeb4402daa033d60}{}\label{utils_8h_a45f9079768593414eeb4402daa033d60}
+
+
+Carica una matrice in un vettore unidimensionale. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em matrix} & contiene il puntatore della matrice (input)  array2d contiene il puntatore all\textquotesingle{}array su cui salvare la matrice(output) \\
+\hline
+{\em order} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!position@{position}}
+\index{position@{position}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{position(int $\ast$vec, int elem, int len)}{position(int *vec, int elem, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}int position (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{vec, }
+\item[{int}]{elem, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_aacb5fa6481405202e36ad810a02595e8}{}\label{utils_8h_aacb5fa6481405202e36ad810a02595e8}
+Trova la posizione in vec dell\textquotesingle{}elemento passato come parametro 
+\begin{DoxyParams}{Parametri}
+{\em vec} & vettore input \\
+\hline
+{\em elem} & elemento da ricercare in vec \\
+\hline
+{\em len} & lunghezza di vec \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+indice di eleme in vec, -\/1 se non presente 
+\end{DoxyReturn}
+\index{utils.\+h@{utils.\+h}!print\+\_\+matrix@{print\+\_\+matrix}}
+\index{print\+\_\+matrix@{print\+\_\+matrix}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+matrix(int $\ast$$\ast$matrix, int ordine)}{print_matrix(int **matrix, int ordine)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{matrix, }
+\item[{int}]{ordine}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a36aacd45d0367938190ecb2a94d1fb3f}{}\label{utils_8h_a36aacd45d0367938190ecb2a94d1fb3f}
+
+
+Stampa a schermo la matrice passata come parametro. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em matrix} & puntatore alla matrice da stampare \\
+\hline
+{\em ordine} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!print\+\_\+matrix\+\_\+2d@{print\+\_\+matrix\+\_\+2d}}
+\index{print\+\_\+matrix\+\_\+2d@{print\+\_\+matrix\+\_\+2d}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+matrix\+\_\+2d(int $\ast$matrix, int ordine)}{print_matrix_2d(int *matrix, int ordine)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+matrix\+\_\+2d (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{matrix, }
+\item[{int}]{ordine}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a43bf6785b9953c773eee0c52a5ec3e65}{}\label{utils_8h_a43bf6785b9953c773eee0c52a5ec3e65}
+
+
+Stampa a schermo la matrice 2d passata come parametro (matrice salvata come vettore unidimensionale) 
+
+
+\begin{DoxyParams}{Parametri}
+{\em matrix} & puntatore alla matrice \\
+\hline
+{\em ordine} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!read\+\_\+line@{read\+\_\+line}}
+\index{read\+\_\+line@{read\+\_\+line}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+line(int fd, char $\ast$buff, int max\+\_\+len)}{read_line(int fd, char *buff, int max_len)}}]{\setlength{\rightskip}{0pt plus 5cm}int read\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{char $\ast$}]{buff, }
+\item[{int}]{max\+\_\+len}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_aada96e223087c1869c2a1a8b1098c183}{}\label{utils_8h_aada96e223087c1869c2a1a8b1098c183}
+
+
+Funzione che legge una riga da file. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file descriptor del file \\
+\hline
+{\em buff} & buffer di uscita su cui scrivere la stringa letta \\
+\hline
+{\em max\+\_\+len} & lunghezza massima del buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+numero di caratteri letti 
+\end{DoxyReturn}
+\index{utils.\+h@{utils.\+h}!read\+\_\+matrix@{read\+\_\+matrix}}
+\index{read\+\_\+matrix@{read\+\_\+matrix}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{read\+\_\+matrix(int fd, int ordine, int $\ast$$\ast$matrix)}{read_matrix(int fd, int ordine, int **matrix)}}]{\setlength{\rightskip}{0pt plus 5cm}void read\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int}]{ordine, }
+\item[{int $\ast$$\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_ae1af2fb7369da48f2742cf9f0f031c22}{}\label{utils_8h_ae1af2fb7369da48f2742cf9f0f031c22}
+
+
+Funzione che legge una matrice da file. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file descriptor del file csv contenente la matrice \\
+\hline
+{\em ordine} & ordine della matrice \\
+\hline
+{\em matrix} & puntatore (output) alla matrice letta \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!set\+\_\+matrix@{set\+\_\+matrix}}
+\index{set\+\_\+matrix@{set\+\_\+matrix}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+matrix(int $\ast$shmem, int order)}{set_matrix(int *shmem, int order)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{shmem, }
+\item[{int}]{order}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_ac9b84feb3065714ff2d0a2e0722d1c3b}{}\label{utils_8h_ac9b84feb3065714ff2d0a2e0722d1c3b}
+
+
+Inizializza la matrice a 0. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em shmem} & puntatore al vettore matrice \\
+\hline
+{\em order} & ordine della matrice \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!set\+\_\+row@{set\+\_\+row}}
+\index{set\+\_\+row@{set\+\_\+row}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{set\+\_\+row(int $\ast$$\ast$control\+\_\+matrix, int order, int row, int value)}{set_row(int **control_matrix, int order, int row, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{control\+\_\+matrix, }
+\item[{int}]{order, }
+\item[{int}]{row, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a6726ed399c12a4fba8d324c448207b73}{}\label{utils_8h_a6726ed399c12a4fba8d324c448207b73}
+
+
+Scrive una riga della matrice passata come parametro, con il valore selezionato. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em control\+\_\+matrix} & matrice \\
+\hline
+{\em order} & ordine della matrice \\
+\hline
+{\em row} & riga da modificare \\
+\hline
+{\em valore} & da memorizzare nella riga \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!stampa@{stampa}}
+\index{stampa@{stampa}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{stampa(char $\ast$buff)}{stampa(char *buff)}}]{\setlength{\rightskip}{0pt plus 5cm}void stampa (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buff}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_a65743059357cefdd1a1ac1ffb6049760}{}\label{utils_8h_a65743059357cefdd1a1ac1ffb6049760}
+
+
+Funzione che stampa a schermo (usando system call) la stringa come parametro. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em buff} & stringa da stampare a schermo \\
+\hline
+\end{DoxyParams}
+\index{utils.\+h@{utils.\+h}!write\+\_\+matrix\+\_\+@{write\+\_\+matrix\+\_\+}}
+\index{write\+\_\+matrix\+\_\+@{write\+\_\+matrix\+\_\+}!utils.\+h@{utils.\+h}}
+\subsubsection[{\texorpdfstring{write\+\_\+matrix\+\_\+(int fd, int $\ast$$\ast$matrix, int ord)}{write_matrix_(int fd, int **matrix, int ord)}}]{\setlength{\rightskip}{0pt plus 5cm}void write\+\_\+matrix\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{int}]{fd, }
+\item[{int $\ast$$\ast$}]{matrix, }
+\item[{int}]{ord}
+\end{DoxyParamCaption}
+)}\hypertarget{utils_8h_ad05311c1c06e52f00599e07841bcd5bc}{}\label{utils_8h_ad05311c1c06e52f00599e07841bcd5bc}
+
+
+Scrive la matrice in formato csv su file descriptor passato come parametro. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file descriptor di scrittura \\
+\hline
+{\em matrix} & matrice da scrivere su file \\
+\hline
+{\em ord} & ordine della matrice \\
+\hline
+\end{DoxyParams}

@@ -2,6 +2,7 @@ CC:= gcc
 LD:= gcc
 
 CFLAGS:= -c -Wall -w
+LDFLAGS:= -pthread 
 DEPS:= mylib.h utils.h child.h
 BIN:= matrixMath
 
@@ -26,9 +27,9 @@ utils.o: utils.c utils.h
 
 child.o: child.c child.h utils.h
 	@echo $@
-	@$(CC) $(CFLAGS) -o $@ $<
+	@$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
 
 $(BIN): $(OBJS)
-	@$(LD) -o $@ $^
+	@$(LD) $(LDFLAGS) -o $@ $^
 
 .PHONY: all clean

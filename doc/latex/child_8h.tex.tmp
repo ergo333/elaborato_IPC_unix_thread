@@ -1,0 +1,132 @@
+\hypertarget{child_8h}{}\section{Riferimenti per il file child.\+h}
+\label{child_8h}\index{child.\+h@{child.\+h}}
+
+
+Descrive le operazioni che i thread \char`\"{}figl\char`\"{} devono eseguire.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+Grafo delle dipendenze di inclusione per child.\+h\+:
+% FIG 0
+Questo grafo mostra quali altri file includono direttamente o indirettamente questo file\+:
+% FIG 1
+\subsection*{Strutture dati}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcomando}{comando}
+\end{DoxyCompactItemize}
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{child_8h_a95c0a02a24042b7420319b5bd6a05bd6}{C\+H\+I\+L\+D\+\_\+\+S\+O\+M\+MA}~1\hypertarget{child_8h_a95c0a02a24042b7420319b5bd6a05bd6}{}\label{child_8h_a95c0a02a24042b7420319b5bd6a05bd6}
+
+\begin{DoxyCompactList}\small\item\em Comando che indica che il figlio deve eseguire una somma. \end{DoxyCompactList}\item 
+\#define \hyperlink{child_8h_acd96db6973aa66caf258e114cbb2cee3}{C\+H\+I\+L\+D\+\_\+\+M\+O\+L\+T\+I\+P\+L\+I\+CA}~0\hypertarget{child_8h_acd96db6973aa66caf258e114cbb2cee3}{}\label{child_8h_acd96db6973aa66caf258e114cbb2cee3}
+
+\begin{DoxyCompactList}\small\item\em Comando che indica che il figlio deve eseguire una moltiplicazione. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries execute} (void $\ast$cmd)\hypertarget{child_8h_ae9e45fa9ee38694eabce1cad22f4942d}{}\label{child_8h_ae9e45fa9ee38694eabce1cad22f4942d}
+
+\item 
+int \hyperlink{child_8h_a4410cf1796867a142c8477bd9ebb559a}{somma} (int $\ast$$\ast$matrix, int row, int ordine)
+\begin{DoxyCompactList}\small\item\em Funzione che calcola la somma della riga della matrice. \end{DoxyCompactList}\item 
+int \hyperlink{child_8h_a1b737ceaaaea843b8066f876c9105420}{moltiplica} (int $\ast$$\ast$a, int $\ast$$\ast$b, int row\+\_\+a, int column\+\_\+b, int ordine)
+\begin{DoxyCompactList}\small\item\em Funzione che effettua la moltiplicazione tra vettori. \end{DoxyCompactList}\item 
+void \hyperlink{child_8h_a376c7696ba61d7f4dbefa3e2b76dc231}{estrai\+\_\+dati} (int $\ast$cmd, int $\ast$riga, int $\ast$colonna, int $\ast$ordine, char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Funzione che estrae il comando da eseguire dalla stringa inviata dal processo padre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Descrive le operazioni che i thread \char`\"{}figl\char`\"{} devono eseguire. 
+
+\begin{DoxyAuthor}{Autore}
+Ghignoni Eros V\+R397407 
+\end{DoxyAuthor}
+
+
+\subsection{Documentazione delle funzioni}
+\index{child.\+h@{child.\+h}!estrai\+\_\+dati@{estrai\+\_\+dati}}
+\index{estrai\+\_\+dati@{estrai\+\_\+dati}!child.\+h@{child.\+h}}
+\subsubsection[{\texorpdfstring{estrai\+\_\+dati(int $\ast$cmd, int $\ast$riga, int $\ast$colonna, int $\ast$ordine, char $\ast$msg)}{estrai_dati(int *cmd, int *riga, int *colonna, int *ordine, char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void estrai\+\_\+dati (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{cmd, }
+\item[{int $\ast$}]{riga, }
+\item[{int $\ast$}]{colonna, }
+\item[{int $\ast$}]{ordine, }
+\item[{char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{child_8h_a376c7696ba61d7f4dbefa3e2b76dc231}{}\label{child_8h_a376c7696ba61d7f4dbefa3e2b76dc231}
+
+
+Funzione che estrae il comando da eseguire dalla stringa inviata dal processo padre. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em cmd} & salva il valore del comando da eseguire \\
+\hline
+{\em riga} & salva il valore della riga su cui eseguire i calcoli \\
+\hline
+{\em colonna} & salva il valore della colonna su cui eseguire i calcoli \\
+\hline
+{\em msg} & stringa inviata dal padre al figlio \\
+\hline
+\end{DoxyParams}
+\index{child.\+h@{child.\+h}!moltiplica@{moltiplica}}
+\index{moltiplica@{moltiplica}!child.\+h@{child.\+h}}
+\subsubsection[{\texorpdfstring{moltiplica(int $\ast$$\ast$a, int $\ast$$\ast$b, int row\+\_\+a, int column\+\_\+b, int ordine)}{moltiplica(int **a, int **b, int row_a, int column_b, int ordine)}}]{\setlength{\rightskip}{0pt plus 5cm}int moltiplica (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{a, }
+\item[{int $\ast$$\ast$}]{b, }
+\item[{int}]{row\+\_\+a, }
+\item[{int}]{column\+\_\+b, }
+\item[{int}]{ordine}
+\end{DoxyParamCaption}
+)}\hypertarget{child_8h_a1b737ceaaaea843b8066f876c9105420}{}\label{child_8h_a1b737ceaaaea843b8066f876c9105420}
+
+
+Funzione che effettua la moltiplicazione tra vettori. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em a} & matrice A \\
+\hline
+{\em b} & matrice B \\
+\hline
+{\em row\+\_\+a} & riga di A \\
+\hline
+{\em column\+\_\+b} & colonna di B \\
+\hline
+{\em ordine} & ordine delle matrici \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+il risultato del prodotto tra vettori 
+\end{DoxyReturn}
+\index{child.\+h@{child.\+h}!somma@{somma}}
+\index{somma@{somma}!child.\+h@{child.\+h}}
+\subsubsection[{\texorpdfstring{somma(int $\ast$$\ast$matrix, int row, int ordine)}{somma(int **matrix, int row, int ordine)}}]{\setlength{\rightskip}{0pt plus 5cm}int somma (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{matrix, }
+\item[{int}]{row, }
+\item[{int}]{ordine}
+\end{DoxyParamCaption}
+)}\hypertarget{child_8h_a4410cf1796867a142c8477bd9ebb559a}{}\label{child_8h_a4410cf1796867a142c8477bd9ebb559a}
+
+
+Funzione che calcola la somma della riga della matrice. 
+
+
+\begin{DoxyParams}{Parametri}
+{\em matrix} & matrice \\
+\hline
+{\em row} & riga da sommare \\
+\hline
+{\em ordine} & della matrice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Restituisce}
+il risultato della somma 
+\end{DoxyReturn}

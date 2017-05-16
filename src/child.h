@@ -1,17 +1,13 @@
 /**
   * @file child.h
-  * @brief Descrive le operazioni che i processi figli devono eseguire
+  * @brief Descrive le operazioni che i thread "figl" devono eseguire
   *
   * @author Ghignoni Eros VR397407
   * 
   */
 
 #include <string.h>
-#include <sys/shm.h>
-#include <sys/ipc.h>
-#include <sys/msg.h>
-#include <sys/sem.h>
-
+#include <pthread.h>
 
 #ifndef CHILD_H
 #define CHILD_H
@@ -22,31 +18,24 @@
 ///Comando che indica che il figlio deve eseguire una moltiplicazione
 #define CHILD_MOLTIPLICA 0
 
-//Comando che indica che il figlio ha terminato
-#define CHILD_EXIT -1
-
-///Tipo del messaggio (attributo mtype della struct message)
-#define MSG_TYPE 1
-
-/**
-  * @brief Struttura dati che descrive il formato dei messaggi inviati da child a parent
-  */
 typedef struct{
 
-	long mtype;  	///indica il tipo di messaggio (MSG_TYPE)
-	int pid;	  	///indica il pid del figlio
-	int riga;		///riga usata per i calcoli (matrice A per moltiplicazione, C per somma)
-	int colonna;	///colonna usata per i calcoli (matrice B)
-	int operation;	///operazione eseguita e terminata (vedi costanti)
+  int riga;           ///Indica la riga su cui effettuare l'operazione
+  int colonna;        ///Indica la colonna su cui effettuare l'operazione
+  int ordine;         ///Indica l'ordine delle matrici
+  int ** matrix_A;    ///Indica la matrice A su cui effettuare la moltiplicazione
+  int ** matrix_B;    ///Indica la matrice B su cui effettuare la moltiplicazione
+  int ** matrix_C;    ///Indica la matrice C su cui salvare il risultato della moltiplicazione
+  int * somma;        ///Puntatore alla variabile su cui salvare la somma delle righe di C
+  int cmd;            ///Indica il  comando che il figlio deve eseguire
+  pthread_mutex_t * s_stato;    ///Semaforo per modificare lo stato della thread visto dal padre
+  int * stato;                  ///Vettore in cui sono salvati gli stati delle thread
+  pthread_mutex_t * sem_somma;  ///Semaforo per accedere alla variabile condivisa somma righe
 
-}message;
+}comando;
 
-/** 
-  * @brief Funzione principale del processo figlio.
-    Si occupa dello svolgimento delle operazioni sulle matrici richieste dal processo padre
-  * @param pipe_fd contiene il file descriptor su cui leggere i comandi inviati dal processo padre
-  */
-void execute(int pipe_fd);
+
+void execute(void *cmd);
 
 /**
   * @brief Funzione che calcola la somma della riga della matrice
@@ -55,7 +44,7 @@ void execute(int pipe_fd);
   * @param ordine della matrice
   * @return il risultato della somma
   */
-int somma(int * matrix, int row, int ordine);
+int somma(int ** matrix, int row, int ordine);
 
 /**
   * @brief Funzione che effettua la moltiplicazione tra vettori
@@ -66,7 +55,7 @@ int somma(int * matrix, int row, int ordine);
   * @param ordine ordine delle matrici
   * @return il risultato del prodotto tra vettori 
   */
-int moltiplica(int * a, int * b, int row_a, int column_b, int ordine);
+int moltiplica(int ** a, int ** b, int row_a, int column_b, int ordine);
 
 /**
   * @brief Funzione che estrae il comando da eseguire dalla stringa inviata dal processo padre

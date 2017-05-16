@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Elaborato_IPC_processi:  File sorgente child.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Elaborato_IPC_processi
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Strutture&#160;dati</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;globali</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">child.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="child_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef CHILD_H</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define CHILD_H</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="child_8h.html#a95c0a02a24042b7420319b5bd6a05bd6">   16</a></span>&#160;<span class="preprocessor">#define CHILD_SOMMA 1</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="child_8h.html#acd96db6973aa66caf258e114cbb2cee3">   19</a></span>&#160;<span class="preprocessor">#define CHILD_MOLTIPLICA 0</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcomando.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> riga;           </div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcomando.html#a28e6ec08b9bbaaf72321ddebcadc0a76">   24</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcomando.html#a28e6ec08b9bbaaf72321ddebcadc0a76">colonna</a>;        </div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structcomando.html#a0c6d0595cab2eb118ae7996528a42e49">   25</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcomando.html#a0c6d0595cab2eb118ae7996528a42e49">ordine</a>;         </div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structcomando.html#aa3500fb248efc740cd98546da3065603">   26</a></span>&#160;  <span class="keywordtype">int</span> ** <a class="code" href="structcomando.html#aa3500fb248efc740cd98546da3065603">matrix_A</a>;    </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structcomando.html#a0a88284394c397d5552d5be2219c28bd">   27</a></span>&#160;  <span class="keywordtype">int</span> ** <a class="code" href="structcomando.html#a0a88284394c397d5552d5be2219c28bd">matrix_B</a>;    </div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structcomando.html#acec686d8b1359432b25b89e02abdc973">   28</a></span>&#160;  <span class="keywordtype">int</span> ** <a class="code" href="structcomando.html#acec686d8b1359432b25b89e02abdc973">matrix_C</a>;    </div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structcomando.html#ae24ac8f066e13e7d8bf01f700285a5bf">   29</a></span>&#160;  <span class="keywordtype">int</span> * <a class="code" href="structcomando.html#ae24ac8f066e13e7d8bf01f700285a5bf">somma</a>;        </div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structcomando.html#ad8357a50a25044f2dc1c3c1175b44add">   30</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structcomando.html#ad8357a50a25044f2dc1c3c1175b44add">cmd</a>;            </div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structcomando.html#a574a62dc0a86db6cc73b79cbbf101d1e">   31</a></span>&#160;  pthread_mutex_t * <a class="code" href="structcomando.html#a574a62dc0a86db6cc73b79cbbf101d1e">s_stato</a>;    </div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structcomando.html#a387b8fe797a197a43722686988e40b84">   32</a></span>&#160;  <span class="keywordtype">int</span> * <a class="code" href="structcomando.html#a387b8fe797a197a43722686988e40b84">stato</a>;                  </div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structcomando.html#a108682d653147bf58f94ceecb47bdd1a">   33</a></span>&#160;  pthread_mutex_t * <a class="code" href="structcomando.html#a108682d653147bf58f94ceecb47bdd1a">sem_somma</a>;  </div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}<a class="code" href="structcomando.html">comando</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> execute(<span class="keywordtype">void</span> *cmd);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">int</span> <a class="code" href="child_8h.html#a4410cf1796867a142c8477bd9ebb559a">somma</a>(<span class="keywordtype">int</span> ** matrix, <span class="keywordtype">int</span> row, <span class="keywordtype">int</span> ordine);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">int</span> <a class="code" href="child_8h.html#a1b737ceaaaea843b8066f876c9105420">moltiplica</a>(<span class="keywordtype">int</span> ** a, <span class="keywordtype">int</span> ** b, <span class="keywordtype">int</span> row_a, <span class="keywordtype">int</span> column_b, <span class="keywordtype">int</span> ordine);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> <a class="code" href="child_8h.html#a376c7696ba61d7f4dbefa3e2b76dc231">estrai_dati</a>(<span class="keywordtype">int</span> * cmd, <span class="keywordtype">int</span> * riga, <span class="keywordtype">int</span> * colonna, <span class="keywordtype">int</span> * ordine, <span class="keywordtype">char</span> * msg);</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="structcomando_html_a387b8fe797a197a43722686988e40b84"><div class="ttname"><a href="structcomando.html#a387b8fe797a197a43722686988e40b84">comando::stato</a></div><div class="ttdeci">int * stato</div><div class="ttdoc">Semaforo per modificare lo stato della thread visto dal padre. </div><div class="ttdef"><b>Definition:</b> child.h:32</div></div>
+<div class="ttc" id="structcomando_html_a0c6d0595cab2eb118ae7996528a42e49"><div class="ttname"><a href="structcomando.html#a0c6d0595cab2eb118ae7996528a42e49">comando::ordine</a></div><div class="ttdeci">int ordine</div><div class="ttdoc">Indica la colonna su cui effettuare l&amp;#39;operazione. </div><div class="ttdef"><b>Definition:</b> child.h:25</div></div>
+<div class="ttc" id="structcomando_html_a0a88284394c397d5552d5be2219c28bd"><div class="ttname"><a href="structcomando.html#a0a88284394c397d5552d5be2219c28bd">comando::matrix_B</a></div><div class="ttdeci">int ** matrix_B</div><div class="ttdoc">Indica la matrice A su cui effettuare la moltiplicazione. </div><div class="ttdef"><b>Definition:</b> child.h:27</div></div>
+<div class="ttc" id="child_8h_html_a376c7696ba61d7f4dbefa3e2b76dc231"><div class="ttname"><a href="child_8h.html#a376c7696ba61d7f4dbefa3e2b76dc231">estrai_dati</a></div><div class="ttdeci">void estrai_dati(int *cmd, int *riga, int *colonna, int *ordine, char *msg)</div><div class="ttdoc">Funzione che estrae il comando da eseguire dalla stringa inviata dal processo padre. </div></div>
+<div class="ttc" id="structcomando_html_acec686d8b1359432b25b89e02abdc973"><div class="ttname"><a href="structcomando.html#acec686d8b1359432b25b89e02abdc973">comando::matrix_C</a></div><div class="ttdeci">int ** matrix_C</div><div class="ttdoc">Indica la matrice B su cui effettuare la moltiplicazione. </div><div class="ttdef"><b>Definition:</b> child.h:28</div></div>
+<div class="ttc" id="structcomando_html_ad8357a50a25044f2dc1c3c1175b44add"><div class="ttname"><a href="structcomando.html#ad8357a50a25044f2dc1c3c1175b44add">comando::cmd</a></div><div class="ttdeci">int cmd</div><div class="ttdoc">Puntatore alla variabile su cui salvare la somma delle righe di C. </div><div class="ttdef"><b>Definition:</b> child.h:30</div></div>
+<div class="ttc" id="structcomando_html_a108682d653147bf58f94ceecb47bdd1a"><div class="ttname"><a href="structcomando.html#a108682d653147bf58f94ceecb47bdd1a">comando::sem_somma</a></div><div class="ttdeci">pthread_mutex_t * sem_somma</div><div class="ttdoc">Vettore in cui sono salvati gli stati delle thread. </div><div class="ttdef"><b>Definition:</b> child.h:33</div></div>
+<div class="ttc" id="structcomando_html_a574a62dc0a86db6cc73b79cbbf101d1e"><div class="ttname"><a href="structcomando.html#a574a62dc0a86db6cc73b79cbbf101d1e">comando::s_stato</a></div><div class="ttdeci">pthread_mutex_t * s_stato</div><div class="ttdoc">Indica il comando che il figlio deve eseguire. </div><div class="ttdef"><b>Definition:</b> child.h:31</div></div>
+<div class="ttc" id="structcomando_html_a28e6ec08b9bbaaf72321ddebcadc0a76"><div class="ttname"><a href="structcomando.html#a28e6ec08b9bbaaf72321ddebcadc0a76">comando::colonna</a></div><div class="ttdeci">int colonna</div><div class="ttdoc">Indica la riga su cui effettuare l&amp;#39;operazione. </div><div class="ttdef"><b>Definition:</b> child.h:24</div></div>
+<div class="ttc" id="child_8h_html_a1b737ceaaaea843b8066f876c9105420"><div class="ttname"><a href="child_8h.html#a1b737ceaaaea843b8066f876c9105420">moltiplica</a></div><div class="ttdeci">int moltiplica(int **a, int **b, int row_a, int column_b, int ordine)</div><div class="ttdoc">Funzione che effettua la moltiplicazione tra vettori. </div><div class="ttdef"><b>Definition:</b> child.c:57</div></div>
+<div class="ttc" id="child_8h_html_a4410cf1796867a142c8477bd9ebb559a"><div class="ttname"><a href="child_8h.html#a4410cf1796867a142c8477bd9ebb559a">somma</a></div><div class="ttdeci">int somma(int **matrix, int row, int ordine)</div><div class="ttdoc">Funzione che calcola la somma della riga della matrice. </div><div class="ttdef"><b>Definition:</b> child.c:46</div></div>
+<div class="ttc" id="structcomando_html_aa3500fb248efc740cd98546da3065603"><div class="ttname"><a href="structcomando.html#aa3500fb248efc740cd98546da3065603">comando::matrix_A</a></div><div class="ttdeci">int ** matrix_A</div><div class="ttdoc">Indica l&amp;#39;ordine delle matrici. </div><div class="ttdef"><b>Definition:</b> child.h:26</div></div>
+<div class="ttc" id="structcomando_html_ae24ac8f066e13e7d8bf01f700285a5bf"><div class="ttname"><a href="structcomando.html#ae24ac8f066e13e7d8bf01f700285a5bf">comando::somma</a></div><div class="ttdeci">int * somma</div><div class="ttdoc">Indica la matrice C su cui salvare il risultato della moltiplicazione. </div><div class="ttdef"><b>Definition:</b> child.h:29</div></div>
+<div class="ttc" id="structcomando_html"><div class="ttname"><a href="structcomando.html">comando</a></div><div class="ttdef"><b>Definition:</b> child.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

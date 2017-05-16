@@ -119,16 +119,18 @@ int i;
 	return -1;
 }
 
-void write_matrix_(int fd, int * matrix, int ord){
+void write_matrix_(int fd, int ** matrix, int ord){
 
-int i;
+int i, j;
 char buff[64];
 
-	for (i = 0; i < ord * ord; i++){
-		if ((i+1) % ord == 0)
-			sprintf(buff, "%d\n", matrix[i]);
-		else
-			sprintf(buff, "%d;", matrix[i]);
+	for (i = 0; i < ord; i++){
+		for (j = 0; j < ord - 1; j++){
+			sprintf(buff, "%d;", matrix[i][j]);
+			write(fd, buff, strlen(buff));
+		}
+
+		sprintf(buff, "%d\n", matrix[i][j]);
 		write(fd, buff, strlen(buff));
 	}
 }

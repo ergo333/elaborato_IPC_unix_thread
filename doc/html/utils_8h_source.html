@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Elaborato_IPC_processi:  File sorgente utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Elaborato_IPC_processi
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Strutture&#160;dati</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;globali</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">utils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="utils_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef UTILS_H</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define UTILS_H</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="utils_8h.html#a3d90c3595597b3132a70468e83a492ad">   21</a></span>&#160;<span class="preprocessor">#define NUM_BYTE 512</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="utils_8h.html#aef5dfd8b21e74931b22c514b25aafc10">   24</a></span>&#160;<span class="preprocessor">#define SHM_KEY_A 90   </span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="utils_8h.html#a5eb6670fe12ca57b8f7c3ba914173edf">   27</a></span>&#160;<span class="preprocessor">#define SHM_KEY_B 91</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="utils_8h.html#a2141a533908abd184a1dd49d03aa89ad">   30</a></span>&#160;<span class="preprocessor">#define SHM_KEY_C 92</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="utils_8h.html#a23145b02060e2da8aad870e128740a39">   33</a></span>&#160;<span class="preprocessor">#define SHM_KEY_SOMMA 93</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="utils_8h.html#acebb45f6d9740063956da4fc574b2b04">   36</a></span>&#160;<span class="preprocessor">#define MSG_KEY 100 </span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="utils_8h.html#a299ffb74b818be524ba85f23e7978906">   39</a></span>&#160;<span class="preprocessor">#define SEM_KEY 101 </span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="utils_8h.html#a23195218eef2cf21e2beae685a041783">   42</a></span>&#160;<span class="preprocessor">#define DELIMITER &quot;;&quot;   </span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a65743059357cefdd1a1ac1ffb6049760">stampa</a>(<span class="keywordtype">char</span>* buff);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#ae1af2fb7369da48f2742cf9f0f031c22">read_matrix</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> ordine, <span class="keywordtype">int</span> ** matrix);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#aada96e223087c1869c2a1a8b1098c183">read_line</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> * buff, <span class="keywordtype">int</span> max_len);        <span class="comment">//ritorna il numero di caratteri letti</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a36aacd45d0367938190ecb2a94d1fb3f">print_matrix</a>(<span class="keywordtype">int</span> ** matrix, <span class="keywordtype">int</span> ordine);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a43bf6785b9953c773eee0c52a5ec3e65">print_matrix_2d</a>(<span class="keywordtype">int</span> * matrix, <span class="keywordtype">int</span> ordine);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">int</span> ** <a class="code" href="utils_8h.html#aa83bfe3ed154fdf125ec364f9a5e3217">create_matrix</a>(<span class="keywordtype">int</span> order);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#ac99aadc6a3e61718bab7d71cddc9deb6">free_matrix</a>(<span class="keywordtype">int</span> ** matrix, <span class="keywordtype">int</span> order);</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a45f9079768593414eeb4402daa033d60">load_matrix</a>(<span class="keywordtype">int</span> ** matrix, <span class="keywordtype">int</span> * array2d, <span class="keywordtype">int</span> order);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#ac9b84feb3065714ff2d0a2e0722d1c3b">set_matrix</a>(<span class="keywordtype">int</span> *shmem, <span class="keywordtype">int</span> order);</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#aacb5fa6481405202e36ad810a02595e8">position</a>(<span class="keywordtype">int</span> * vec, <span class="keywordtype">int</span> elem, <span class="keywordtype">int</span> len);</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#ad05311c1c06e52f00599e07841bcd5bc">write_matrix_</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> ** matrix, <span class="keywordtype">int</span> ord);</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#a983183d89abaf6bb022ee3d7084994a1">get_next_row</a>(<span class="keywordtype">int</span> ** control_matrix, <span class="keywordtype">int</span> order);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a6726ed399c12a4fba8d324c448207b73">set_row</a>(<span class="keywordtype">int</span> ** control_matrix, <span class="keywordtype">int</span> order, <span class="keywordtype">int</span> row, <span class="keywordtype">int</span> value);</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a8a3bf67efd4aa75c8ae5e92b96770069">genera_parametri</a>(<span class="keywordtype">int</span> riga, <span class="keywordtype">int</span> colonna, <span class="keywordtype">int</span> ordine, <span class="keywordtype">int</span> cmd, <span class="keywordtype">char</span> * buff);</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="utils_8h_html_ad05311c1c06e52f00599e07841bcd5bc"><div class="ttname"><a href="utils_8h.html#ad05311c1c06e52f00599e07841bcd5bc">write_matrix_</a></div><div class="ttdeci">void write_matrix_(int fd, int **matrix, int ord)</div><div class="ttdoc">Scrive la matrice in formato csv su file descriptor passato come parametro. </div><div class="ttdef"><b>Definition:</b> utils.c:122</div></div>
+<div class="ttc" id="utils_8h_html_ae1af2fb7369da48f2742cf9f0f031c22"><div class="ttname"><a href="utils_8h.html#ae1af2fb7369da48f2742cf9f0f031c22">read_matrix</a></div><div class="ttdeci">void read_matrix(int fd, int ordine, int **matrix)</div><div class="ttdoc">Funzione che legge una matrice da file. </div><div class="ttdef"><b>Definition:</b> utils.c:7</div></div>
+<div class="ttc" id="utils_8h_html_a983183d89abaf6bb022ee3d7084994a1"><div class="ttname"><a href="utils_8h.html#a983183d89abaf6bb022ee3d7084994a1">get_next_row</a></div><div class="ttdeci">int get_next_row(int **control_matrix, int order)</div><div class="ttdoc">Ritorna l&amp;#39;indice di riga della matrice che è gia stata calcolata tutta (moltiplicazione) La matrice p...</div><div class="ttdef"><b>Definition:</b> utils.c:138</div></div>
+<div class="ttc" id="utils_8h_html_a43bf6785b9953c773eee0c52a5ec3e65"><div class="ttname"><a href="utils_8h.html#a43bf6785b9953c773eee0c52a5ec3e65">print_matrix_2d</a></div><div class="ttdeci">void print_matrix_2d(int *matrix, int ordine)</div><div class="ttdoc">Stampa a schermo la matrice 2d passata come parametro (matrice salvata come vettore unidimensionale) ...</div><div class="ttdef"><b>Definition:</b> utils.c:98</div></div>
+<div class="ttc" id="utils_8h_html_aa83bfe3ed154fdf125ec364f9a5e3217"><div class="ttname"><a href="utils_8h.html#aa83bfe3ed154fdf125ec364f9a5e3217">create_matrix</a></div><div class="ttdeci">int ** create_matrix(int order)</div><div class="ttdoc">Funzione che alloca la memoria ad una matrice di ordine passato come parametro inizializzata a 0...</div><div class="ttdef"><b>Definition:</b> utils.c:61</div></div>
+<div class="ttc" id="utils_8h_html_a8a3bf67efd4aa75c8ae5e92b96770069"><div class="ttname"><a href="utils_8h.html#a8a3bf67efd4aa75c8ae5e92b96770069">genera_parametri</a></div><div class="ttdeci">void genera_parametri(int riga, int colonna, int ordine, int cmd, char *buff)</div><div class="ttdoc">Genera una stringa che descrive i parametri che il padre invia al figlio. </div><div class="ttdef"><b>Definition:</b> utils.c:170</div></div>
+<div class="ttc" id="utils_8h_html_aacb5fa6481405202e36ad810a02595e8"><div class="ttname"><a href="utils_8h.html#aacb5fa6481405202e36ad810a02595e8">position</a></div><div class="ttdeci">int position(int *vec, int elem, int len)</div><div class="ttdef"><b>Definition:</b> utils.c:111</div></div>
+<div class="ttc" id="utils_8h_html_aada96e223087c1869c2a1a8b1098c183"><div class="ttname"><a href="utils_8h.html#aada96e223087c1869c2a1a8b1098c183">read_line</a></div><div class="ttdeci">int read_line(int fd, char *buff, int max_len)</div><div class="ttdoc">Funzione che legge una riga da file. </div><div class="ttdef"><b>Definition:</b> utils.c:42</div></div>
+<div class="ttc" id="utils_8h_html_a6726ed399c12a4fba8d324c448207b73"><div class="ttname"><a href="utils_8h.html#a6726ed399c12a4fba8d324c448207b73">set_row</a></div><div class="ttdeci">void set_row(int **control_matrix, int order, int row, int value)</div><div class="ttdoc">Scrive una riga della matrice passata come parametro, con il valore selezionato. </div><div class="ttdef"><b>Definition:</b> utils.c:162</div></div>
+<div class="ttc" id="utils_8h_html_a36aacd45d0367938190ecb2a94d1fb3f"><div class="ttname"><a href="utils_8h.html#a36aacd45d0367938190ecb2a94d1fb3f">print_matrix</a></div><div class="ttdeci">void print_matrix(int **matrix, int ordine)</div><div class="ttdoc">Stampa a schermo la matrice passata come parametro. </div><div class="ttdef"><b>Definition:</b> utils.c:28</div></div>
+<div class="ttc" id="utils_8h_html_a65743059357cefdd1a1ac1ffb6049760"><div class="ttname"><a href="utils_8h.html#a65743059357cefdd1a1ac1ffb6049760">stampa</a></div><div class="ttdeci">void stampa(char *buff)</div><div class="ttdoc">Funzione che stampa a schermo (usando system call) la stringa come parametro. </div><div class="ttdef"><b>Definition:</b> utils.c:3</div></div>
+<div class="ttc" id="utils_8h_html_a45f9079768593414eeb4402daa033d60"><div class="ttname"><a href="utils_8h.html#a45f9079768593414eeb4402daa033d60">load_matrix</a></div><div class="ttdeci">void load_matrix(int **matrix, int *array2d, int order)</div><div class="ttdoc">Carica una matrice in un vettore unidimensionale. </div><div class="ttdef"><b>Definition:</b> utils.c:81</div></div>
+<div class="ttc" id="utils_8h_html_ac9b84feb3065714ff2d0a2e0722d1c3b"><div class="ttname"><a href="utils_8h.html#ac9b84feb3065714ff2d0a2e0722d1c3b">set_matrix</a></div><div class="ttdeci">void set_matrix(int *shmem, int order)</div><div class="ttdoc">Inizializza la matrice a 0. </div><div class="ttdef"><b>Definition:</b> utils.c:91</div></div>
+<div class="ttc" id="utils_8h_html_ac99aadc6a3e61718bab7d71cddc9deb6"><div class="ttname"><a href="utils_8h.html#ac99aadc6a3e61718bab7d71cddc9deb6">free_matrix</a></div><div class="ttdeci">void free_matrix(int **matrix, int order)</div><div class="ttdoc">Libera la memoria allocata per la matrice passata come parametro. </div><div class="ttdef"><b>Definition:</b> utils.c:70</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

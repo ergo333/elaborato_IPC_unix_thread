@@ -123,7 +123,7 @@ int position(int * vec, int elem, int len);
   * @param matrix matrice da scrivere su file
   * @param ord ordine della matrice
   */
-void write_matrix_(int fd, int * matrix, int ord);
+void write_matrix_(int fd, int ** matrix, int ord);
 
 /**
   * @brief Ritorna l'indice di riga della matrice che è gia stata calcolata tutta (moltiplicazione)
