@@ -4,10 +4,14 @@
 
 void execute(void * cmd){
 
+char buff[128];
 
 	comando * c = (comando *) cmd;
 
 	if (c -> cmd == CHILD_MOLTIPLICA){ 
+	
+		sprintf(buff, "Thread -> MOILTIPLICA [%d][%d]\n", c -> riga, c -> colonna);
+		stampa(buff);
 		
 		int mul = moltiplica(c -> matrix_A, 
 							 c -> matrix_B, 
@@ -27,7 +31,9 @@ void execute(void * cmd){
 
 	}
 	if (c -> cmd == CHILD_SOMMA){
-
+		
+		sprintf(buff, "Thread -> SOMMA [%d]\n", c -> riga);
+		stampa(buff);
 		int val = somma(c -> matrix_C, c -> riga, c -> ordine);
 
 		pthread_mutex_lock(c -> sem_somma);
