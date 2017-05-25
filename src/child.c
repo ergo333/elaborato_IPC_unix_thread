@@ -1,16 +1,16 @@
 #include "child.h"
 #include "utils.h"
 
-
 void execute(void * cmd){
 
 char buff[128];
+srand(time(NULL));
 
 	comando * c = (comando *) cmd;
 
 	if (c -> cmd == CHILD_MOLTIPLICA){ 
 	
-		sprintf(buff, "Thread -> MOILTIPLICA [%d][%d]\n", c -> riga, c -> colonna);
+		sprintf(buff, "Thread [%d] -> MOLTIPLICA [%d][%d]\n", c -> i_thread, c -> riga, c -> colonna);
 		stampa(buff);
 		
 		int mul = moltiplica(c -> matrix_A, 
@@ -32,7 +32,7 @@ char buff[128];
 	}
 	if (c -> cmd == CHILD_SOMMA){
 		
-		sprintf(buff, "Thread -> SOMMA [%d]\n", c -> riga);
+		sprintf(buff, "Thread [%d] -> SOMMA [%d]\n", c -> i_thread, c -> riga);
 		stampa(buff);
 		int val = somma(c -> matrix_C, c -> riga, c -> ordine);
 

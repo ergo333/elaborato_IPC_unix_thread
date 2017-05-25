@@ -23,6 +23,7 @@ typedef struct{
   int riga;           ///Indica la riga su cui effettuare l'operazione
   int colonna;        ///Indica la colonna su cui effettuare l'operazione
   int ordine;         ///Indica l'ordine delle matrici
+  int i_thread;       ///Indica l'indice del thread
   int ** matrix_A;    ///Indica la matrice A su cui effettuare la moltiplicazione
   int ** matrix_B;    ///Indica la matrice B su cui effettuare la moltiplicazione
   int ** matrix_C;    ///Indica la matrice C su cui salvare il risultato della moltiplicazione
