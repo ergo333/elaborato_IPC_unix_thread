@@ -4,7 +4,6 @@
 void execute(void * cmd){
 
 char buff[128];
-srand(time(NULL));
 
 	comando * c = (comando *) cmd;
 

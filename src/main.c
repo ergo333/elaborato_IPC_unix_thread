@@ -166,6 +166,12 @@ char * std_buff = malloc(sizeof(char) * 256);					//buffer di scrittura su scher
 		
 		if (pthread_create(&threads[i], NULL, &execute, &comandi[i])){
 			stampa("Errore creazione thread\n");
+			free(threads);
+			free(comandi);
+			free(matrix_A);
+			free(matrix_B);
+			free(matrix_C);
+			free(std_buff);	
 			return 0;
 		}
 
@@ -183,6 +189,13 @@ char * std_buff = malloc(sizeof(char) * 256);					//buffer di scrittura su scher
 
 	if (comandi_somma == NULL){
 		stampa("Errore  creazione comando per threadn\n");
+		free(threads);
+		free(comandi);
+		free(sum_threads);
+		free(matrix_A);
+		free(matrix_B);
+		free(matrix_C);
+		free(std_buff);
 		return 0;
 	}	
 
@@ -230,6 +243,14 @@ char * std_buff = malloc(sizeof(char) * 256);					//buffer di scrittura su scher
 
 			if (pthread_create(&sum_threads[i], NULL, &execute, &comandi_somma[i])){
 				stampa("Errore creazione thread\n");
+				free(threads);
+				free(comandi);
+				free(comandi_somma);
+				free(sum_threads);
+				free(matrix_A);
+				free(matrix_B);
+				free(matrix_C);
+				free(std_buff);
 				return 0;
 			}
 
@@ -266,6 +287,9 @@ char * std_buff = malloc(sizeof(char) * 256);					//buffer di scrittura su scher
 	free(comandi);
 	free(comandi_somma);
 	free(sum_threads);
+	free(matrix_A);
+	free(matrix_B);
+	free(matrix_C);
 	free(std_buff);
 	close(fd_matA);
 	close(fd_matB);
